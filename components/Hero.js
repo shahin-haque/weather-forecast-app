@@ -6,12 +6,11 @@ import rain from "../public/rain.jpg";
 import snow from "../public/snow.jpg";
 import thunderstorm from "../public/thunderstorm.jpg";
 
-const Hero = ({ wcode }) => {
-  console.log(wcode);
-
+const Hero = ({ current_weather }) => {
+  const currentWeatherCode = current_weather.weathercode;
   return (
     <div className="bg">
-      {wcode === 0 && (
+      {currentWeatherCode === 0 && (
         <Image
           className="bg-2nd"
           src={sunnySky}
@@ -21,7 +20,7 @@ const Hero = ({ wcode }) => {
           height={500}
         />
       )}
-      {wcode === 1 && (
+      {currentWeatherCode === 1 && (
         <Image
           className="bg-2nd"
           src={clearSky}
@@ -31,7 +30,7 @@ const Hero = ({ wcode }) => {
           height={500}
         />
       )}
-      {wcode === 2 && (
+      {currentWeatherCode === 2 && (
         <Image
           className="bg-2nd"
           src={cloudySky}
@@ -41,7 +40,7 @@ const Hero = ({ wcode }) => {
           height={500}
         />
       )}
-      {wcode === 3 && (
+      {currentWeatherCode === 3 && (
         <Image
           className="bg-2nd"
           src={cloudySky}
@@ -51,7 +50,7 @@ const Hero = ({ wcode }) => {
           height={500}
         />
       )}
-      {wcode >= 61 && wcode <= 67 && (
+      {currentWeatherCode >= 61 && currentWeatherCode <= 67 && (
         <Image
           className="bg-2nd"
           src={rain}
@@ -61,7 +60,7 @@ const Hero = ({ wcode }) => {
           height={500}
         />
       )}
-      {wcode >= 71 && wcode <= 86 && (
+      {currentWeatherCode >= 71 && currentWeatherCode <= 86 && (
         <Image
           className="bg-2nd"
           src={snow}
@@ -71,7 +70,7 @@ const Hero = ({ wcode }) => {
           height={500}
         />
       )}
-      {wcode === 96 && (
+      {currentWeatherCode === 96 && (
         <Image
           className="bg-2nd"
           src={thunderstorm}
@@ -81,7 +80,7 @@ const Hero = ({ wcode }) => {
           height={500}
         />
       )}
-      {wcode === 99 && (
+      {currentWeatherCode === 99 && (
         <Image
           className="bg-2nd"
           src={thunderstorm}

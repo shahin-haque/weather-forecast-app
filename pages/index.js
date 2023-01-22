@@ -1,3 +1,4 @@
+import Current from "@/components/Current";
 import Hero from "@/components/Hero";
 import Image from "next/image";
 import React from "react";
@@ -5,20 +6,15 @@ import cloudySky from "../public/cloudy-sky.jpg";
 
 const Home = ({ weather }) => {
   const { current_weather, hourly, daily } = weather;
+  console.log(weather);
 
-  const currentWeatherCode = current_weather.weathercode;
   return (
     <main>
       <div className="img">
-        <Hero wcode={currentWeatherCode} />
+        <Hero current_weather={current_weather} />
       </div>
       <div className="info">
-        <h1>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quas
-          harum enim magni dignissimos soluta repudiandae perspiciatis beatae?
-          Quos mollitia recusandae unde distinctio cumque, alias quod temporibus
-          excepturi eos laborum.
-        </h1>
+        <Current daily={daily} current_weather={current_weather} />
       </div>
     </main>
   );

@@ -5,6 +5,9 @@
   padding: 0;
   margin: 0;
 }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 img,
 svg {
   max-width: 100%;
@@ -27,7 +30,38 @@ svg {
 }
 .info {
   position: absolute;
-  inset: 4rem;
+  inset: 4rem 1rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.347);
+}
+.info {
+  padding-block: 2rem;
+  text-align: center;
+}
+.info h1 {
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+.forecastText {
+  font-size: 1.5rem;
+  padding-block: 0.5rem;
+  letter-spacing: 2px;
+}
+.week {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.5rem;
+}
+.day-temp {
+  display: flex;
+  align-items: center;
+  /* gap: 1rem; */
+  border: 1px solid;
+}
+.day-temp div > p {
+  border-bottom: 1px solid;
+  padding: 0.5rem;
+}
+.icon-2nd {
 }
